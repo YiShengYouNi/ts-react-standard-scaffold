@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base theme tokens */
+@layer base {
+  :root {
+    --bg: 255 255 255;
+    --fg: 17 24 39;
+    --muted: 107 114 128;
+  }
+  html, body, #root { height: 100%; }
+  body { background-color: rgb(var(--bg)); color: rgb(var(--fg)); }
+}
+
+/* Example component styles */
+@layer components {
+  .container-app {
+    @apply min-h-full grid grid-rows-[auto_1fr_auto];
+  }
+  .app-header, .app-footer {
+    @apply px-4 py-3 bg-gray-100;
+  }
+  .app-main {
+    @apply p-4;
+  }
+  .nav a {
+    @apply mr-3 text-blue-600 hover:underline;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg border px-3 py-1.5 transition active:scale-[0.98];
+  }
+}
