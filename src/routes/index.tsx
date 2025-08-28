@@ -1,10 +1,10 @@
-import React, { Suspense, lazy } from 'react'
-import { createBrowserRouter } from 'react-router-dom'
+import { Suspense, lazy } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
 
-import App from '@/App'
-import Home from '@/pages/Home'
+import App from '@/App';
+import Home from '@/pages/Home';
 
-const About = lazy(() => import('@/pages/About'))
+const About = lazy(() => import('@/pages/About'));
 
 export const router = createBrowserRouter([
   {
@@ -19,8 +19,8 @@ export const router = createBrowserRouter([
           <Suspense fallback={<div>Loading...</div>}>
             <About />
           </Suspense>
-        )
-      }
-    ]
-  }
-])
+        ),
+      },
+    ],
+  },
+]);

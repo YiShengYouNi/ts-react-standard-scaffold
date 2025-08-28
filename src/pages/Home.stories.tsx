@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import Home from './Home'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { MemoryRouter } from 'react-router-dom'
+import type { Meta, StoryObj } from '@storybook/react';
+import Home from './Home';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { MemoryRouter } from 'react-router-dom';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 const meta: Meta<typeof Home> = {
   title: 'Pages/Home',
@@ -17,10 +17,10 @@ const meta: Meta<typeof Home> = {
           </div>
         </MemoryRouter>
       </QueryClientProvider>
-    )
-  ]
-}
-export default meta
+    ),
+  ],
+};
+export default meta;
 
-type Story = StoryObj<typeof Home>
-export const Default: Story = {}
+type Story = StoryObj<typeof Home>;
+export const Default: Story = {};

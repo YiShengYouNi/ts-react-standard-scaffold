@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/button.tsx","./src/components/errorboundary.tsx","./src/hooks/useexample.ts","./src/lib/http.ts","./src/pages/about.tsx","./src/pages/home.stories.tsx","./src/pages/home.tsx","./src/routes/index.tsx","./src/stories/button.stories.tsx","./src/tests/components/button.test.tsx","./src/types/utility.ts"],"version":"5.9.2"}

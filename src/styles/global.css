@@ -9,8 +9,15 @@
     --fg: 17 24 39;
     --muted: 107 114 128;
   }
-  html, body, #root { height: 100%; }
-  body { background-color: rgb(var(--bg)); color: rgb(var(--fg)); }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--fg));
+  }
 }
 
 /* Example component styles */
@@ -18,7 +25,8 @@
   .container-app {
     @apply min-h-full grid grid-rows-[auto_1fr_auto];
   }
-  .app-header, .app-footer {
+  .app-header,
+  .app-footer {
     @apply px-4 py-3 bg-gray-100;
   }
   .app-main {
