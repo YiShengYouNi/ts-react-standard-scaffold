@@ -35,18 +35,22 @@ ts-react-standard-scaffold/
 ├─ .husky/                  # Git hooks
 ├─ .storybook/              # Storybook 配置
 ├─ src/
+│  ├─ api/                  # 数据请求
 │  ├─ components/           # 通用组件（Button、ErrorBoundary）
 │  │  ├─ __tests__/         # 组件测试
 │  │  └─ Button.stories.tsx # Storybook 示例
 │  ├─ hooks/                # 自定义 Hooks
-│  ├─ lib/                  # 请求工具/工具函数
+│  ├─ lib/                  # 运行时工具函数/基础设施（可导出函数、类、常量），可以依赖第三方库
 │  ├─ pages/                # 页面组件（Home、About）
 │  ├─ routes/               # 路由定义
 │  ├─ styles/               # 全局样式（Tailwind）
-│  ├─ types/                # 公共类型工具
-│  └─ main.tsx              # 项目入口
+│  ├─ types/                # TS类型/接口/类型工具，不包含任何运行时代码、无副作用、不依赖第三方运行时库
+│  ├─ stores/               # 状态管理
+│  ├─ stories/              # storybook
+│  └─ main.tsx              # 应用的真实入口模块，负责执行 React 挂载逻辑
 ├─ tailwind.config.ts       # Tailwind 配置
 ├─ vite.config.ts           # Vite 配置（含 Vitest）
+├─ index.html               # 构建入口
 └─ ...
 ```
 

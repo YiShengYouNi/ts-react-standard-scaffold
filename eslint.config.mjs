@@ -21,8 +21,9 @@ export default [
       '.husky',
       'storybook-static',
       'coverage',
+      'public',
       // 测试文件
-      'tests/**',
+      '*/tests/**',
       '.storybook/**',
       'src/stories/**',
       // 配置文件（不需要 eslint 校验）
@@ -63,15 +64,9 @@ export default [
       import: importPlugin,
     },
     rules: {
-      // 关键：关闭 JS 的 no-undef（对 TS 无意义，会误报 JSX）
-      // 'no-undef': 'off',
-
-      // // 可选：再铺一层官方推荐
-      // ...tseslint.configs.recommended.rules,
-      // ...tseslint.configs['recommended-requiring-type-checking'].rules,
-
       'no-console': ['error', { allow: ['warn', 'error'] }],
       '@typescript-eslint/no-explicit-any': 'error',
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' },
