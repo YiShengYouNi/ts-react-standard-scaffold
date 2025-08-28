@@ -18,7 +18,7 @@ const CreateTodoBodySchema = z.object({
   title: z.string().min(1).optional(),
 });
 
-export const handlers = [
+export const todoHandlers = [
   // GET /todos
   http.get('/todos', () => {
     // 可选：严格校验后再返回（演示）
