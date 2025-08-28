@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { type FC } from 'react';
 
 export type ButtonProps = {
-  children: React.ReactNode
-  onClick?: () => void
-  disabled?: boolean
-}
+  children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+};
 
-export default function Button({ children, onClick, disabled = false }: ButtonProps): JSX.Element {
+const Button: FC<ButtonProps> = ({ children, onClick, disabled = false }) => {
   return (
     <button
       type="button"
@@ -17,5 +17,7 @@ export default function Button({ children, onClick, disabled = false }: ButtonPr
     >
       {children}
     </button>
-  )
-}
+  );
+};
+
+export default Button;

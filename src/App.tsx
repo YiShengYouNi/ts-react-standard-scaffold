@@ -1,7 +1,7 @@
-import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import type { FC } from 'react';
+import { Outlet, Link } from 'react-router-dom';
 
-export default function App(): JSX.Element {
+const App: FC = () => {
   return (
     <div className="container-app">
       <header className="app-header">
@@ -15,5 +15,6 @@ export default function App(): JSX.Element {
       </main>
       <footer className="app-footer">© 2025 TS + React Standard Project</footer>
     </div>
-  )
-}
+  );
+};
+export default App;

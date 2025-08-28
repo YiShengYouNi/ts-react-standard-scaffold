@@ -1,27 +1,28 @@
-import React from 'react'
+import React, { type ReactNode } from 'react';
 
-type Props = { children: React.ReactNode }
-type State = { hasError: boolean }
+type Props = { children: ReactNode };
+type State = { hasError: boolean };
 
 export class ErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(): State {
-    return { hasError: true }
+    return { hasError: true };
   }
 
-  componentDidCatch(error: unknown) {
+  override componentDidCatch(error: unknown): void {
     // In production, send to your error tracker here
-    console.error('ErrorBoundary caught an error:', error)
+    console.error('ErrorBoundary caught an error:', error);
   }
 
-  render() {
+  override render(): ReactNode {
     if (this.state.hasError) {
-      return <div role="alert">Something went wrong. Please refresh.</div>
+      return <div role="alert">Something went wrong. Please refresh.</div>;
+    } else {
+      return this.props.children;
     }
-    return this.props.children
   }
 }

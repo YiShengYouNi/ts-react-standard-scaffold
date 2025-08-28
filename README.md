@@ -1,14 +1,12 @@
 # TS + React 标准项目（含 Tailwind / Vitest / Storybook）
 
 这是一个基于 Vite + React + TypeScript 的前端项目脚手架，内置常用的工程化规范与工具，开箱即用。
-适合作为团队内部的标准化项目模板，或个人快速启动项目。
 
 ## 🚀 特性
 
 - TypeScript 严格模式：开启 strict、noUncheckedIndexedAccess、exactOptionalPropertyTypes 等配置，保证类型安全。
 
 - 代码规范：
-
   - ESLint + Prettier（已集成 React/TS/Hook/A11y 插件）
 
   - Husky + lint-staged + commitlint（强制提交规范）
@@ -16,22 +14,19 @@
 - UI 框架：集成 TailwindCSS，支持原子化 CSS 与主题扩展。
 
 - 状态与路由：
-
   - React Router v6（路由拆分 + Lazy/Suspense）
 
   - TanStack Query（数据请求与缓存管理）
 
 - 测试基线：
-
   - Vitest + React Testing Library + JSDOM
 
   - 示例单元测试（Button 组件）
 
 - 文档与设计系统：
-
   - Storybook 8（Vite 构建）
 
- 示例组件故事（Button 组件）
+示例组件故事（Button 组件）
 
 ## 📂 目录结构
 
@@ -85,7 +80,7 @@ pnpm test:watch    # 监听模式
 pnpm test:coverage # 测试覆盖率
 ```
 
-示例测试文件：src/components/__tests__/Button.test.tsx
+示例测试文件：src/components/**tests**/Button.test.tsx
 
 ## 📖 Storybook
 

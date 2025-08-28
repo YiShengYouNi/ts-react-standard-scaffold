@@ -1,0 +1,26 @@
+# 依赖与构建产物
+node_modules
+dist
+storybook-static
+coverage
+.cache
+*.log
+
+# IDE
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Env：仅提交 .env.example，其他都忽略
+.env
+.env.*
+!.env.example
+
+# Husky 内部缓存
+.husky/_
+
+# 可选平台目录（按需保留）
+.vercel
+.netlify
