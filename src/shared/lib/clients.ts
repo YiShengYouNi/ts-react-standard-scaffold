@@ -2,9 +2,9 @@
 
 import type { ZodType, ZodError } from 'zod';
 
-import { env } from '@/config/env';
-import { fetchWithTimeout, toHttpError, type HttpError } from '@/lib/http';
-import { ok, err, type Result } from '@/lib/result';
+import { env } from '@/shared/config/env';
+import { fetchWithTimeout, toHttpError, type HttpError } from '@/shared/lib/http';
+import { ok, err, type Result } from '@/shared/lib/result';
 
 function isAbsUrl(s: string) {
   return /^https?:\/\//i.test(s);

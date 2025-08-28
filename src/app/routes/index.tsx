@@ -2,9 +2,10 @@ import { Suspense, lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import App from '@/App';
-import Home from '@/pages/Home';
+import Home from '@/pages/home';
 
-const About = lazy(() => import('@/pages/About'));
+const About = lazy(() => import('@/pages/about'));
+const TODO = lazy(() => import('@/pages/todo'));
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <About />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'todo',
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <TODO />
           </Suspense>
         ),
       },

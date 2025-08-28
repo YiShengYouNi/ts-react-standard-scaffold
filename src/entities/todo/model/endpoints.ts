@@ -1,4 +1,3 @@
-import { get, post } from './clients';
 import {
   TodoListSchema,
   CreateTodoInputSchema,
@@ -7,8 +6,9 @@ import {
   type Todo,
 } from './schemas';
 
-import type { HttpError } from '@/lib/http';
-import type { Result } from '@/lib/result';
+import { get, post } from '@/shared/lib/clients';
+import type { HttpError } from '@/shared/lib/http';
+import type { Result } from '@/shared/lib/result';
 
 // 查询 Todo 列表
 export function fetchTodos(): ReturnType<typeof get<Todo[]>> {

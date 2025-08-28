@@ -2,7 +2,7 @@
 import { http, HttpResponse } from 'msw';
 import { z } from 'zod';
 
-import { TodoSchema, CreateTodoRespSchema } from '@/apis/schemas';
+import { TodoSchema, CreateTodoRespSchema } from '@/entities/todo/model/schemas';
 
 const mem = {
   todos: [

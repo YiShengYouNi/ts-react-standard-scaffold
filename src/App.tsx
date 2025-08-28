@@ -8,6 +8,7 @@ const App: FC = () => {
         <nav className="nav">
           <Link to="/">Home</Link>
           <Link to="/about">About (Lazy)</Link>
+          <Link to="/todo">Todo (Lazy)</Link>
         </nav>
       </header>
       <main className="app-main">

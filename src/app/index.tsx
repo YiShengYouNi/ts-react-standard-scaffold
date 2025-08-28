@@ -3,9 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 
-import { env } from '@/config/env';
-import { router } from '@/routes';
-import '@/styles/global.css';
+import { router } from './routes';
+
+import { env } from '@/shared/config/env';
+import '@/shared/styles/global.css';
 
 async function enableMockIfNeeded() {
   if (import.meta.env.DEV && env.ENABLE_MOCK) {
