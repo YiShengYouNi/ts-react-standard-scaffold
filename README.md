@@ -63,9 +63,9 @@ ts-react-standard-scaffold/
 │  │  ├─ inventory/
 │  │  │  ├─ model/
 │  │  │  │  ├─ schemas.ts
-│  │  │  │  ├─ api.ts
+│  │  │  │  ├─ api.ts       # 纯数据访问层（http调用）
 │  │  │  │  ├─ keys.ts
-│  │  │  │  └─ queries.ts
+│  │  │  │  └─ queries.ts   # 视图数据层（React Query 适配）
 │  │  │  └─ ui/
 │  │  │      ├─ InventoryTable.tsx
 │  │  ├─ order/

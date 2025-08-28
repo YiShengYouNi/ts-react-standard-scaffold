@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Home from '../pages/Home';
+import Home from '@/pages/home';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter } from 'react-router-dom';
 

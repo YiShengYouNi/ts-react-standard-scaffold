@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.13.1",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "pnpm prebuild && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint ./src --ext .ts,.tsx --fix",
     "format": "prettier --write ./src",
@@ -16,7 +16,10 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "dto:sync": "tsx tools/openapi/fetchAndGenWithSDK.ts",
+    "postinstall": "pnpm dto:sync",
+    "prebuild": "pnpm dto:sync"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.48.0",
@@ -38,6 +41,7 @@
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^24.3.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -51,11 +55,14 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "execa": "^9.6.0",
     "globals": "^16.3.0",
     "husky": "^9.0.11",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.7",
     "msw": "^2.10.5",
+    "openapi-typescript": "^7.9.1",
+    "openapi-typescript-codegen": "^0.29.0",
     "postcss": "^8.4.44",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
@@ -63,6 +70,7 @@
     "storybook": "^8.6.0",
     "tailwindcss": "^3.4.10",
     "terser": "^5.43.1",
+    "tsx": "^4.20.5",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
     "vitest": "^3.2.4"

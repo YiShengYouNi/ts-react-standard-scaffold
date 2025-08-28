@@ -6,7 +6,7 @@ import {
   type UseMutationResult,
 } from '@tanstack/react-query';
 
-import { fetchTodos, createTodo } from './endpoints';
+import { fetchTodos, createTodo } from './api';
 import { QK } from './keys';
 import type { Todo, CreateTodoInput } from './schemas';
 

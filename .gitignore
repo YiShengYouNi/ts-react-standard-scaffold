@@ -5,6 +5,7 @@ storybook-static
 coverage
 .cache
 *.log
+stats.*
 
 # IDE
 .DS_Store
@@ -24,3 +25,9 @@ Thumbs.db
 # 可选平台目录（按需保留）
 .vercel
 .netlify
+
+
+# OpenAPI 临时与指纹文件
+/.openapi-*.json
+/.openapi-*.sha
+src/shared/types/dto/*
